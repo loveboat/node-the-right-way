@@ -11,4 +11,4 @@ fs.watch(filename, function() {
 
 console.log("Now watching " + filename + " for changes...");
 
-// node --harmony watcher.argv.js target.txt
+// node --harmony watcher-argv.js target.txt
