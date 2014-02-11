@@ -12,7 +12,7 @@ server = net.createServer(function(connection) {
 
 	// watcher setup
 	let watcher = fs.watch(filename, function() {
-		connection.write("File " + filename + "changed: " + Date.now() + '\n');
+		connection.write("File '" + filename + "' changed: " + Date.now() + '\n');
 	});
 
 	// cleanup
