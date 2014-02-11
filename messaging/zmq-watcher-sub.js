@@ -21,4 +21,8 @@ subscriber.on('message', function(data) {
 // connect to publisher
 subscriber.connect("tcp://localhost:5432");
 
+// server
+// node --harmony zmq-watcher-pub.js target.txt
+
+// client (this)
 // node --harmony zmq-watcher-sub.js

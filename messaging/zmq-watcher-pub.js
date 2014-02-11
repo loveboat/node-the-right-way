@@ -22,4 +22,8 @@ publisher.bind('tcp://*:5432', function(err) {
 	console.log('Listening for zmq subscribers...');
 });
 
+// server (this)
 // node --harmony zmq-watcher-pub.js target.txt
+
+// client
+// node --harmony zmq-watcher-sub.js
