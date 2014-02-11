@@ -7,3 +7,5 @@ fs.readFile('target.txt', function(err, data) {
 
 	console.log(data.toString());
 });
+
+// node --harmony read-simple.js
