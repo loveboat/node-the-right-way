@@ -35,3 +35,6 @@ server.listen(5432, function() {
 
 // client
 // telnet localhost 5432
+
+// third terminal session (to trigger fs.watch)
+// touch target.txt
