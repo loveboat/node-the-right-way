@@ -15,9 +15,11 @@ responder.on('message', function(data) {
 
 	// read file and reply with content
 	fs.readFile(request.path, function(err, content) {
-		console.log('Sending response content');
 		if (err) {
 			content = 'Error: ' + err.message;
+			console.log('Sending error response');
+		} else {
+			console.log('Sending response content');
 		}
 		responder.send(JSON.stringify({
 			content: content.toString(),
