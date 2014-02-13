@@ -38,4 +38,10 @@ process.on('SIGINT', function() {
 	responder.close();
 });
 
+// handle the process being terminated
+process.on('SIGTERM', function() {
+	console.log('Man down. Medic!..');
+	responder.close();
+});
+
 // node --harmony zmq-filer-rep.js
