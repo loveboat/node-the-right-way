@@ -24,6 +24,9 @@ responder.on('message', function(data) {
 			timestamp: Date.now(),
 			pid: process.pid
 		}));
+		if (err) {
+			throw err;
+		}
 	});
 });
 
@@ -40,8 +43,13 @@ process.on('SIGINT', function() {
 
 // handle the process being terminated
 process.on('SIGTERM', function() {
-	console.log('Man down. Medic!..');
+	console.log('Shutting down (terminated)...');
 	responder.close();
+});
+
+// handle any other uncaught exceptions
+process.on('uncaughtException', function(err) {
+	console.log("Exception: " + err.message);
 });
 
 // node --harmony zmq-filer-rep.js
