@@ -20,3 +20,12 @@ request(options, function(err, res, body) {
 
 // use
 // ./dbcli.js
+
+// 404 - no books db
+// ./dbcli.js GET books
+
+// creates a books db at /books (see diff with POST)
+// ./dbcli.js PUT books
+
+// 200 - books db status returned
+// ./dbcli.js GET books
