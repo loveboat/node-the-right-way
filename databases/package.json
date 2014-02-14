@@ -5,6 +5,7 @@
   "author": "Your Name <you@yoursite.com> (http://yoursite.com/path)",
   "dependencies": {
     "request": "~2.33.0",
-    "cheerio": "~0.12.4"
+    "cheerio": "~0.12.4",
+    "file": "~0.2.1"
   }
 }
