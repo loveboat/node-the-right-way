@@ -12,3 +12,5 @@ exports.testRDFParser = function(test) {
     test.done();
   });
 };
+
+// node --harmony $(which nodeunit) test/
