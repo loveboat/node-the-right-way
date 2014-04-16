@@ -5,6 +5,7 @@ module.exports = {
         doc.authors.forEach(emit);
       }
     }.toString(),
+    
     reduce: '_count'
   },
 
