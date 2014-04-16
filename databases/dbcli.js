@@ -29,3 +29,9 @@ request(options, function(err, res, body) {
 
 // 200 - books db status returned
 // ./dbcli.js GET books
+
+// by author view
+// ./dbcli.js GET books/_design/books/_view/by_author?group=true
+
+// by subject view
+// ./dbcli.js GET books/_design/books/_view/by_subject?group=true
