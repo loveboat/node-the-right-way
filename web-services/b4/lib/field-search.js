@@ -14,7 +14,17 @@
 'use strict';
 const request = require('request');
 module.exports = function(config, app) {  
-  app.get('/api/search/:view', function(req, res) {  
+  app.get('/api/search/:view', function(req, res) {
+
+    // sanity check the view 
+    if (req.params.view != 'author' && req.params.view != 'subject') {
+      res.json(400, { 
+        error: "bad_request", 
+        reason: "unsupported view of '" + req.params.view + "' received"
+      });
+      return;
+    }
+
     request({  
       method: 'GET',
       url: config.bookdb + '_design/books/_view/by_' + req.params.view,  
